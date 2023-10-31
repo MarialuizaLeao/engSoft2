@@ -1,4 +1,3 @@
-//Classe adicionada: usada para a implementacao do padrao de projeto Proxy
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 

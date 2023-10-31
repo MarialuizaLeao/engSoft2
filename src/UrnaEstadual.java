@@ -1,9 +1,3 @@
-/* Classe adicionada
- * A UrnaEstadual eh referente a votacao estadual, ela tem a
- * responsabilidade de tornar os candidatos de cada estado
- * visiveis apenas para a instancia de urna estadual daquele
- * estado
- */
 import java.util.HashMap;
 import java.util.Map;
 import java.io.BufferedReader;

@@ -1,11 +1,7 @@
-// Classe nao modificada: usada para guardar as informacoes do usuario
 public class Voter {
   protected final String electoralCard;
-
   protected final String name;
-
   protected final String state;
-
   public String city;
 
   public static class Builder {

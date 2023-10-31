@@ -1,6 +1,3 @@
-/* Classe adicionada
- * Usada para a implementacao do padrao de projeto Proxy
- */
 public class Server implements OperationsInterface {
 
     public void print(String output) {

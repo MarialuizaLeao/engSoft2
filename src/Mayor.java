@@ -1,8 +1,3 @@
-/* Classe adicionada
- * Um prefeito eh um candidato valido com
- * nome, partido, numero, estado e cidade
- */
-
 import java.util.Set;
 
 public class Mayor extends Candidate {

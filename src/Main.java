@@ -1,9 +1,3 @@
-/* Classe adicionada
- * Classe Main criada separadamente apenas com metodo main
- * e outros metodos de inicializacao
- */
-
-// Padrao de projeto utilizado para permitir apenas a criacao de uma instancia de eleicao
 public class Main {
     private static Election uniqueInstance;
 
@@ -12,21 +6,14 @@ public class Main {
 
     public synchronized static Election getInstance(Election e) {
         if (uniqueInstance == null) {
-            uniqueInstance = e;
+                uniqueInstance = e;
         }
         return uniqueInstance;
     }
 
-    /*
-     * Metodo main inicializa a eleicao junto com sua urna, inicializa candidatos
-     * automaticamente na urna para fins de exemplificacao e apresenta o menu para
-     * o usuario, de onde parte as proximas interacoes com a urna
-     */
     public static void main(String[] args) {
 
         Urna urna = new Urna();
-
-        // Startup the current election instance
         String electionPassword = "password";
 
         Election currentElection = new Election.Builder()
@@ -111,7 +98,7 @@ public class Main {
         urnaES.eleicao = uniqueElectionInstance;
 
         uniqueElectionInstance.urna.loadVoters();
-        uniqueElectionInstance.urna.loadTSEProfessionals();
+        uniqueElectionInstance.urna.loadTSEEmployees();
         uniqueElectionInstance.urna.startMenu();
     }
 }

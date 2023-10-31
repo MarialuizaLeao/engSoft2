@@ -1,12 +1,3 @@
-/* Classe reutilizada
- * Classe utilizada para guardar as informacoes referentes a todas aos
- * votos de todas as categorias de candidatos, por exemplo, adicionar e
- * remover candidatos, computar quantos votos cada um obtem, alem dos
- * votos brancos e nulos
- * A classe foi extendida para suportar todas as funçoes ja existentes
- * tambem para governador, prefeito e senador
-*/
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -14,60 +5,43 @@ import java.util.stream.Collectors;
 import java.text.DecimalFormat;
 
 public class Election {
+
+  private final String password;
+  public Urna urna;
+  private boolean status;
+  private int nullPresidentVotes;
+  private int nullFederalDeputyVotes;
+  private int nullGovernorVotes;
+  private int nullMayorVotes;
+  private int nullSenateVotes;
+  private int presidentProtestVotes;
+  private int federalDeputyProtestVotes;
+  private int governorProtestVotes;
+  private int mayorProtestVotes;
+  private int senateProtestVotes;
+
+  private Map<Voter, Integer> votersPresident = new HashMap<Voter, Integer>();
+  private Map<Voter, Integer> votersFederalDeputy = new HashMap<Voter, Integer>();
+  private Map<Voter, Integer> votersGovernor = new HashMap<Voter, Integer>();
+  private Map<Voter, Integer> votersMayor = new HashMap<Voter, Integer>();
+  private Map<Voter, Integer> votersSenate = new HashMap<Voter, Integer>();
+  private Map<Voter, FederalDeputy> tempFDVote = new HashMap<Voter, FederalDeputy>();
+  private Map<Voter, Senate> tempSVote = new HashMap<Voter, Senate>();
+
   public static void print(String output) {
     System.out.println(output);
   }
 
-  private final String password;
-
-  public Urna urna;
-
-  private boolean status;
-
-  private int nullPresidentVotes;
-
-  private int nullFederalDeputyVotes;
-
-  private int nullGovernorVotes;
-
-  private int nullMayorVotes;
-
-  private int nullSenateVotes;
-
-  private int presidentProtestVotes;
-
-  private int federalDeputyProtestVotes;
-
-  private int governorProtestVotes;
-
-  private int mayorProtestVotes;
-
-  private int senateProtestVotes;
-
-  private Map<Voter, Integer> votersPresident = new HashMap<Voter, Integer>();
-
-  private Map<Voter, Integer> votersFederalDeputy = new HashMap<Voter, Integer>();
-
-  private Map<Voter, Integer> votersGovernor = new HashMap<Voter, Integer>();
-
-  private Map<Voter, Integer> votersMayor = new HashMap<Voter, Integer>();
-
-  private Map<Voter, Integer> votersSenate = new HashMap<Voter, Integer>();
-
-  private Map<Voter, FederalDeputy> tempFDVote = new HashMap<Voter, FederalDeputy>();
-
-  private Map<Voter, Senate> tempSVote = new HashMap<Voter, Senate>();
-
   public static class Builder {
     protected String password;
-    protected Urna urna;
+    protected loadUsers urna;
 
     public Builder password(String password) {
       this.password = password;
       return this;
     }
 
-    public Builder urna(Urna urna) {
+    public Builder urna(loadUsers urna) {
       this.urna = urna;
       return this;
     }

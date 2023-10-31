@@ -1,12 +1,6 @@
-/* Classe adicionada
- * Classe referente ao padrao de projeto Proxy que garante a
- * integridade da urna, verificando e validando o titulo de
- * eleitor do usuario antes de permitir a votacao
-*/
 import java.util.Map;
 
 public class ServerProxy {
-
     Voter resultVoterServer;
 
     public ServerProxy(Map<String, Voter> VoterMap) {

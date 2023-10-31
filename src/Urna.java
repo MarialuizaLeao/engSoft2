@@ -1,8 +1,3 @@
-/* Classe modificada:
- * A classe Urna eh encarregada de gerenciar o flow da votacao,
- * ela guarda as informacoes das votacoes nacionais e redireciona
- * o usuario para as votacoes estaduais atraves do Broker
- */
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.Map;
@@ -11,7 +6,7 @@ import java.io.InputStreamReader;
 import java.io.File;
 import static java.lang.System.exit;
 
-public class Urna {
+public class Urna implements loadUsers {
   public static Election eleicao;
 
   public static class Builder {
@@ -27,11 +22,10 @@ public class Urna {
 
   private static boolean exit = false;
 
-  private static final Map<String, TSEProfessional> TSEMap = new HashMap<>();
+  private static final Map<String, TSEEmployee> TSEMap = new HashMap<>();
 
   private static final Map<String, Voter> VoterMap = new HashMap<>();
 
-  // Hash com urnas estaduais, uma para cada estado
   public static final Map<String, UrnaEstadual> UrnasMap = new HashMap<>();
 
   public static Map<Integer, President> presidentCandidates = new HashMap<Integer, President>();
@@ -146,7 +140,6 @@ public class Urna {
 
   }
 
-  // Broker redireciona usuario para a votacao estadual adequada
   public static UrnaEstadual estateElections(Voter voter) {
     BrokerServer broker = new BrokerServer(voter.state, UrnasMap);
     UrnaEstadual urnaEstadual = broker.returnResult();
@@ -210,10 +203,10 @@ public class Urna {
     }
   }
 
-  private static TSEProfessional getTSEProfessional() {
+  private static TSEEmployee getTSEEmployee() {
     print("Insira seu usuário:");
     String user = readString();
-    TSEProfessional tseProfessional = TSEMap.get(user);
+    TSEEmployee tseProfessional = TSEMap.get(user);
     if (tseProfessional == null) {
       print("Funcionário do TSE não encontrado, por favor confirme se a entrada está correta e tente novamente");
     } else {
@@ -432,7 +425,7 @@ public class Urna {
     }
   }
 
-  private static void startSession(CertifiedProfessional tseProfessional) {
+  private static void startSession(TSEEmployee tseProfessional) {
     try {
       print("Insira a senha da urna");
       String pwd = readString();
@@ -444,7 +437,7 @@ public class Urna {
     }
   }
 
-  private static void endSession(CertifiedProfessional tseProfessional) {
+  private static void endSession(TSEEmployee tseProfessional) {
     try {
       print("Insira a senha da urna:");
       String pwd = readString();
@@ -456,7 +449,7 @@ public class Urna {
     }
   }
 
-  private static void showResults(CertifiedProfessional tseProfessional) {
+  private static void showResults(TSEEmployee tseProfessional) {
     try {
       print("Insira a senha da urna");
       String pwd = readString();
@@ -469,7 +462,7 @@ public class Urna {
 
   private static void tseMenu() {
     try {
-      TSEProfessional tseProfessional = getTSEProfessional();
+      TSEEmployee tseProfessional = getTSEEmployee();
       if (tseProfessional == null)
         return;
       print("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n");
@@ -487,16 +480,16 @@ public class Urna {
             case 0 -> back = true;
             default -> print("Comando inválido\n");
           }
-        } else if (tseProfessional instanceof CertifiedProfessional) {
+        } else if (tseProfessional instanceof TSEEmployee) {
           print("(1) Iniciar sessão");
           print("(2) Finalizar sessão");
           print("(3) Mostrar resultados");
           print("(0) Sair");
           int command = readInt();
           switch (command) {
-            case 1 -> startSession((CertifiedProfessional) tseProfessional);
-            case 2 -> endSession((CertifiedProfessional) tseProfessional);
-            case 3 -> showResults((CertifiedProfessional) tseProfessional);
+            case 1 -> startSession((TSEEmployee) tseProfessional);
+            case 2 -> endSession((TSEEmployee) tseProfessional);
+            case 3 -> showResults((TSEEmployee) tseProfessional);
             case 0 -> back = true;
             default -> print("Comando inválido\n");
           }
@@ -509,6 +502,7 @@ public class Urna {
     }
   }
 
+  @Override
   public void loadVoters() {
     try {
       File myObj = new File("voterLoad.txt");
@@ -526,8 +520,9 @@ public class Urna {
     }
   }
 
-  public void loadTSEProfessionals() {
-    TSEMap.put("employee1", new CertifiedProfessional.Builder()
+  @Override
+  public void loadTSEEmployees() {
+    TSEMap.put("employee1", new TSEEmployee.Builder()
         .user("employee1")
         .password("54321")
         .build());
