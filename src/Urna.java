@@ -527,12 +527,12 @@ public class Urna {
   }
 
   public void loadTSEProfessionals() {
-    TSEMap.put("cert", new CertifiedProfessional.Builder()
-        .user("cert")
+    TSEMap.put("employee1", new CertifiedProfessional.Builder()
+        .user("employee1")
         .password("54321")
         .build());
-    TSEMap.put("emp", new TSEEmployee.Builder()
-        .user("emp")
+    TSEMap.put("employee2", new TSEEmployee.Builder()
+        .user("employee2")
         .password("12345")
         .build());
   }
