@@ -1,8 +1,25 @@
-/* Classe nao modificada
-*  Responsavel por gerenciar a preparacao do ambiente, como
-*  adicionar e remover candidatos
-*/
-public class TSEEmployee extends TSEProfessional {
+public class TSEEmployee{
+
+  protected final String user;
+  protected final String password;
+
+  public TSEEmployee(String user, String password) {
+    this.user = user;
+    this.password = password;
+  }
+
+  public void startSession(Election election, String password) {
+    election.start(password);
+  }
+
+  public void endSession(Election election, String password) {
+    election.finish(password);
+  }
+
+  public String getFinalResult(Election election, String password) {
+    return election.getResults(password);
+  }
+
   public void addCandidate(Candidate candidate, Election election, String password) {
     if (candidate instanceof President)
       election.addPresidentCandidate((President) candidate, password);
@@ -54,9 +71,7 @@ public class TSEEmployee extends TSEProfessional {
     }
   }
 
-  protected TSEEmployee(
-      String user,
-      String password) {
-    super(user, password);
+  public String getUser() {
+    return this.user;
   }
 }
