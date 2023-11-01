@@ -1,81 +1,11 @@
 import java.util.Set;
 
-public class Mayor extends Candidate {
+public class Mayor extends StateCandidate {
   protected final String city;
-  protected final String state;
 
-  public static class Builder {
-    protected String name;
-    protected String party;
-    protected int number;
-    protected String city;
-    protected String state;
-
-    public Builder name(String name) {
-      this.name = name;
-      return this;
-    }
-
-    public Builder party(String party) {
-      this.party = party;
-      return this;
-    }
-
-    public Builder number(int number) {
-      this.number = number;
-      return this;
-    }
-
-    public Builder city(String city) {
-      this.city = city;
-      return this;
-    }
-
-    public Builder state(String state) {
-      this.state = state;
-      return this;
-    }
-
-    public Mayor build() {
-      if (number <= 0)
-        throw new IllegalArgumentException("number mustn't be less than or equal to 0");
-
-      if (name == null)
-        throw new IllegalArgumentException("name mustn't be null");
-
-      if (name.isEmpty())
-        throw new IllegalArgumentException("name mustn't be empty");
-
-      if (party == null)
-        throw new IllegalArgumentException("party mustn't be null");
-
-      if (party.isEmpty())
-        throw new IllegalArgumentException("party mustn't be empty");
-
-      if (city == null)
-        throw new IllegalArgumentException("city mustn't be null");
-
-      if (city.isEmpty())
-        throw new IllegalArgumentException("city mustn't be empty");
-
-      return new Mayor(
-          this.name,
-          this.party,
-          this.number,
-          this.city,
-          this.state);
-    }
-  }
-
-  protected Mayor(
-      String name,
-      String party,
-      int number,
-      String city,
-      String state) {
-    super(name, party, number);
+  public Mayor(String name, String party, int number, String state, String city) {
+    super(name, party, number, state);
     this.city = city;
-    this.state = state;
   }
 
   @Override
@@ -98,9 +28,5 @@ public class Mayor extends Candidate {
 
   public String getCity() {
     return this.city;
-  }
-
-  public String getState() {
-    return this.state;
   }
 }

@@ -19,15 +19,10 @@ public class Urna implements loadUsers {
   }
 
   private static final BufferedReader scanner = new BufferedReader(new InputStreamReader(System.in));
-
   private static boolean exit = false;
-
   private static final Map<String, TSEEmployee> TSEMap = new HashMap<>();
-
   private static final Map<String, Voter> VoterMap = new HashMap<>();
-
   public static final Map<String, UrnaEstadual> UrnasMap = new HashMap<>();
-
   public static Map<Integer, President> presidentCandidates = new HashMap<Integer, President>();
 
   public static void print(String output) {
@@ -268,61 +263,37 @@ public class Urna implements loadUsers {
     print("Qual o partido do candidato?");
     String party = readString();
 
-    print("Qual a cidade do candidato?");
-    String city = readString();
-
     Candidate candidate = null;
     if (candidateType == 2) {
       print("Qual o estado do candidato?");
       String state = readString();
 
       print("\nCadastrar o candidato deputado federal " + name + " Nº " + number + " do " + party + "(" + state + ")?");
-      candidate = new FederalDeputy.Builder()
-          .name(name)
-          .number(123)
-          .party(party)
-          .state(state)
-          .build();
+      candidate = new FederalDeputy(name, party, number, state);
     } else if (candidateType == 3) {
       print("Qual o estado do candidato?");
       String state = readString();
 
       print("\nCadastrar o candidato governador " + name + " Nº " + number + " do " + party + "(" + state + ")?");
-      candidate = new Governor.Builder()
-          .name(name)
-          .number(123)
-          .party(party)
-          .state(state)
-          .build();
+      candidate = new Governor(name, party, number, state);
     } else if (candidateType == 5) {
+      print("Qual o estado do candidato?");
+      String state = readString();
+
       print("Qual a cidade do candidato?");
-      String cidade = readString();
+      String city = readString();
 
       print("\nCadastrar o candidato prefeito " + name + " Nº " + number + " do " + party + "(" + city + ")?");
-      candidate = new Mayor.Builder()
-          .name(name)
-          .number(123)
-          .party(party)
-          .city(cidade)
-          .build();
+      candidate = new Mayor(name, party, number, state, city);
     } else if (candidateType == 4) {
       print("Qual o estado do candidato?");
       String state = readString();
 
       print("\nCadastrar o candidato senador " + name + " Nº " + number + " do " + party + "(" + state + ")?");
-      candidate = new Senate.Builder()
-          .name(name)
-          .number(123)
-          .party(party)
-          .state(state)
-          .build();
+      candidate = new Senate(name, party, number, state);
     } else if (candidateType == 1) {
       print("\nCadastrar o candidato a presidente " + name + " Nº " + number + " do " + party + "?");
-      candidate = new President.Builder()
-          .name(name)
-          .number(123)
-          .party(party)
-          .build();
+      candidate = new President(name, party, number);
     }
 
     print("(1) Sim\n(2) Não");
