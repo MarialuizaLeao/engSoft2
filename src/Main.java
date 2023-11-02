@@ -1,9 +1,6 @@
 public class Main {
     private static Election uniqueInstance;
 
-    private Main() {
-    }
-
     public synchronized static Election getInstance(Election e) {
         if (uniqueInstance == null) {
                 uniqueInstance = e;
