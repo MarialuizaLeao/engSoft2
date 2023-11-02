@@ -440,30 +440,21 @@ public class Urna implements loadUsers {
       boolean back = false;
       while (!back) {
         print("Escolha uma opção:");
-        if (tseProfessional instanceof TSEEmployee) {
-          print("(1) Cadastrar candidato");
-          print("(2) Remover candidato");
-          print("(0) Sair");
-          int command = readInt();
-          switch (command) {
-            case 1 -> addCandidate((TSEEmployee) tseProfessional);
-            case 2 -> removeCandidate((TSEEmployee) tseProfessional);
-            case 0 -> back = true;
-            default -> print("Comando inválido\n");
-          }
-        } else if (tseProfessional instanceof TSEEmployee) {
-          print("(1) Iniciar sessão");
-          print("(2) Finalizar sessão");
-          print("(3) Mostrar resultados");
-          print("(0) Sair");
-          int command = readInt();
-          switch (command) {
-            case 1 -> startSession((TSEEmployee) tseProfessional);
-            case 2 -> endSession((TSEEmployee) tseProfessional);
-            case 3 -> showResults((TSEEmployee) tseProfessional);
-            case 0 -> back = true;
-            default -> print("Comando inválido\n");
-          }
+        print("(1) Cadastrar candidato");
+        print("(2) Remover candidato");
+        print("(3) Iniciar sessão");
+        print("(4) Finalizar sessão");
+        print("(5) Mostrar resultados");
+        print("(0) Sair");
+        int command = readInt();
+        switch (command) {
+          case 1 -> addCandidate((TSEEmployee) tseProfessional);
+          case 2 -> removeCandidate((TSEEmployee) tseProfessional);
+          case 3 -> startSession((TSEEmployee) tseProfessional);
+          case 4 -> endSession((TSEEmployee) tseProfessional);
+          case 5 -> showResults((TSEEmployee) tseProfessional);
+          case 0 -> back = true;
+          default -> print("Comando inválido\n");
         }
       }
     } catch (Warning e) {
