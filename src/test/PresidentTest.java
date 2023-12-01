@@ -1,7 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import President;
+import main.java.President;
 
 public class PresidentTest {
   @Test

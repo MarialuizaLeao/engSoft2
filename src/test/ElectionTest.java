@@ -7,6 +7,8 @@ import java.util.stream.Collectors;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
+
+import main.java.Election;
 public class ElectionTest {
   @Test
   public void isValidTest(){

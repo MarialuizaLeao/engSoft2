@@ -2,9 +2,10 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import CertifiedProfessional;
-import Election;
-import President;
-import FederalDeputy;
+import main.java.Election;
+import main.java.FederalDeputy;
+import main.java.President;
+import main.java.Voter;
 
 public class CertifiedProfessionalTest {
   @Test

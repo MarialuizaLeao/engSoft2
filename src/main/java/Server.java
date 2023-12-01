@@ -1,3 +1,4 @@
+package main.java;
 public class Server implements OperationsInterface {
 
     public void print(String output) {

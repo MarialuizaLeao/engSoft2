@@ -1,7 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import Candidate;
+import main.java.Candidate;
 
 public class CandidateTest {
   @Test

@@ -1,9 +1,10 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import TSEEmployee;
-import President;
-import FederalDeputy;
+import main.java.Election;
+import main.java.FederalDeputy;
+import main.java.President;
+import main.java.TSEEmployee;
 
 public class TSEEmployeeTest {
   @Test

@@ -1,3 +1,4 @@
+package main.java;
 import java.util.Set;
 
 public class StateCandidate extends Candidate{

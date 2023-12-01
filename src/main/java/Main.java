@@ -1,3 +1,4 @@
+package main.java;
 public class Main {
     private static Election uniqueInstance;
 
