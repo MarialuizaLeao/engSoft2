@@ -1,7 +1,9 @@
+ 
+
 import java.util.Set;
 
-public class Senate extends StateCandidate {
-  public Senate(String name, String party, int number, String state) {
+public class FederalDeputy extends StateCandidate {
+  public FederalDeputy(String name, String party, int number, String state) {
     super(name, party, number, state);
   }
 
@@ -10,10 +12,10 @@ public class Senate extends StateCandidate {
     if (obj == this)
       return true;
 
-    if (!(obj instanceof Senate))
+    if (!(obj instanceof FederalDeputy))
       return false;
 
-    var fd = (Senate) obj;
+    var fd = (FederalDeputy) obj;
 
     return this.toString().equals(fd.toString());
   }

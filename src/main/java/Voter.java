@@ -1,3 +1,4 @@
+ 
 public class Voter {
   protected final String electoralCard;
   protected final String name;

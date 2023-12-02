@@ -3,10 +3,10 @@ full:
 	make run
 
 build: 
-	cd "$(shell pwd)/src"  && javac Main.java
+	cd "$(shell pwd)/src/main/java"  && javac Main.java
 
 run: 
-	cd "$(shell pwd)/src" && java Main
+	cd "$(shell pwd)/src/main/java" && java Main
 
 clean:
-	rm **/*.class
+	rm src/main/java/*.class

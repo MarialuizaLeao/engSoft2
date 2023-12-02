@@ -1,3 +1,5 @@
+ 
+
 public class Main {
     private static Election uniqueInstance;
 
