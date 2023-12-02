@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Set;
+
 public class Voter {
   protected final String electoralCard;
   protected final String name;
@@ -27,6 +29,12 @@ public class Voter {
     }
 
     public Voter build() {
+      Set<String> validStates = Set.of("AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG",
+      "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO");
+
+    if (!validStates.contains(state))
+      throw new IllegalArgumentException("state is invalid");
+
       if (electoralCard == null)
         throw new IllegalArgumentException("electoralCard mustn't be null");
 
