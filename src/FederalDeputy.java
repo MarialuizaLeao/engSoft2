@@ -1,5 +1,6 @@
 package main;
 
+
 import java.util.Set;
 
 public class FederalDeputy extends StateCandidate {

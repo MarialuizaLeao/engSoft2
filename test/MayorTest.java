@@ -20,4 +20,15 @@ public class MayorTest {
         Assert.assertTrue("O estado do candidato nao esta como definido pelo builder.", mayor.getState().equals(state));
         Assert.assertTrue("A cidade do candidato nao esta como definido pelo builder.", mayor.getCity().equals(city));
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testCreateMayorWithoutCity() {
+        String name = "John Doe";
+        String party = "Party A";
+        int number = 1;
+        String state = "MG";
+        String city = null;
+
+        Mayor mayor = new Mayor(name, party, number, state, city);
+    }
 }

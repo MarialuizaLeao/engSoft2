@@ -7,6 +7,11 @@ public class Mayor extends StateCandidate {
 
   public Mayor(String name, String party, int number, String state, String city) {
     super(name, party, number, state);
+    if (city == null)
+      throw new IllegalArgumentException("city mustn't be empty");
+
+    if (city.isEmpty())
+      throw new IllegalArgumentException("city mustn't be empty");
     this.city = city;
   }
 
