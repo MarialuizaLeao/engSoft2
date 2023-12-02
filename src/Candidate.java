@@ -23,6 +23,7 @@ public class Candidate {
 
     if (number <= 0)
       throw new IllegalArgumentException("number must be greater or equal to 1");
+      
     this.name = name;
     this.party = party;
     this.number = number;

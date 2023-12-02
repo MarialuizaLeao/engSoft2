@@ -1,6 +1,6 @@
 package test;
 
-import main.Mayor;
+import main.Candidate;
 import org.junit.*;
 
 public class CandidateTest {
