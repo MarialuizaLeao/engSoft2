@@ -1,6 +1,6 @@
 package main.test;
 
-import main;
+import main.*;
 import org.junit.*;
 
 public class PresidentTest {
