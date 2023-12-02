@@ -18,7 +18,7 @@ public class PresidentTest {
         .number(number)
         .build();
 
-    assertTrue("O nome do candidato nao esta como definido pelo builder.", pres.getName().equals(name));
+    assertTrue("O nome do candidato nao esta como definido pelo.", pres.getName().equals(name));
     assertTrue("O partido do candidato nao esta como definido pelo builder.", pres.getParty().equals(party));
     assertTrue("O numero do candidato nao esta como definido pelo builder.", pres.getNumber() == number);
   }
