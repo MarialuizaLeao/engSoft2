@@ -1,4 +1,4 @@
-package unitTest;
+package test;
 
 import main.Mayor;
 import org.junit.*;

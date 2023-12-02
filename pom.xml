@@ -12,7 +12,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
-            <scope>unitTest</scope>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -25,7 +25,7 @@
     <build>
         <sourceDirectory>src</sourceDirectory>
 
-        <testSourceDirectory>unitTest</testSourceDirectory>
+        <testSourceDirectory>test</testSourceDirectory>
 
         <plugins>
             <!-- Compile and package the source code into a JAR -->
