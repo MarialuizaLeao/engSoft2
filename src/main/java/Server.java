@@ -1,4 +1,8 @@
+<<<<<<< HEAD:src/main/java/Server.java
 
+=======
+package main.java;
+>>>>>>> c7f5a062d99275f7fee24ddc25519bd11cae82f4:src/Server.java
 public class Server implements OperationsInterface {
 
     public void print(String output) {

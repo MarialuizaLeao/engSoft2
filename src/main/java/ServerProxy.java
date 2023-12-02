@@ -1,5 +1,9 @@
+<<<<<<< HEAD:src/main/java/ServerProxy.java
  
 
+=======
+package main.java;
+>>>>>>> c7f5a062d99275f7fee24ddc25519bd11cae82f4:src/ServerProxy.java
 import java.util.Map;
 
 public class ServerProxy {

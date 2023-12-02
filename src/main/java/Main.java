@@ -1,5 +1,9 @@
+<<<<<<< HEAD:src/main/java/Main.java
  
 
+=======
+package main.java;
+>>>>>>> c7f5a062d99275f7fee24ddc25519bd11cae82f4:src/Main.java
 public class Main {
     private static Election uniqueInstance;
 

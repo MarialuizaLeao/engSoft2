@@ -1,4 +1,8 @@
+<<<<<<< HEAD:src/main/java/Voter.java
  
+=======
+package main.java;
+>>>>>>> c7f5a062d99275f7fee24ddc25519bd11cae82f4:src/Voter.java
 public class Voter {
   protected final String electoralCard;
   protected final String name;
