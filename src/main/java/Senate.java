@@ -1,8 +1,3 @@
-<<<<<<< HEAD:src/main/java/Senate.java
-
-=======
-package main.java;
->>>>>>> c7f5a062d99275f7fee24ddc25519bd11cae82f4:src/Senate.java
 import java.util.Set;
 
 public class Senate extends StateCandidate {

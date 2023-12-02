@@ -1,9 +1,3 @@
-<<<<<<< HEAD:src/main/java/Election.java
- 
-
-=======
-package main.java;
->>>>>>> c7f5a062d99275f7fee24ddc25519bd11cae82f4:src/Election.java
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;

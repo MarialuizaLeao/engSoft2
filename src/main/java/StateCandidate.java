@@ -1,9 +1,3 @@
-<<<<<<< HEAD:src/main/java/StateCandidate.java
- 
-
-=======
-package main.java;
->>>>>>> c7f5a062d99275f7fee24ddc25519bd11cae82f4:src/StateCandidate.java
 import java.util.Set;
 
 public class StateCandidate extends Candidate{

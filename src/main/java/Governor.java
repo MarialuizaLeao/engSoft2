@@ -1,8 +1,3 @@
-<<<<<<< HEAD:src/main/java/Governor.java
- 
-=======
-package main.java;
->>>>>>> c7f5a062d99275f7fee24ddc25519bd11cae82f4:src/Governor.java
 import java.util.Set;
 
 public class Governor extends StateCandidate{

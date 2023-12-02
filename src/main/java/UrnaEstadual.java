@@ -1,9 +1,3 @@
-<<<<<<< HEAD:src/main/java/UrnaEstadual.java
- 
-
-=======
-package main.java;
->>>>>>> c7f5a062d99275f7fee24ddc25519bd11cae82f4:src/UrnaEstadual.java
 import java.util.HashMap;
 import java.util.Map;
 import java.io.BufferedReader;
