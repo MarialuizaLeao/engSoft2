@@ -23,9 +23,9 @@
     </properties>
     
     <build>
-        <sourceDirectory>src/main/java</sourceDirectory>
+        <sourceDirectory>src</sourceDirectory>
 
-        <testSourceDirectory>src/test</testSourceDirectory>
+        <testSourceDirectory>test</testSourceDirectory>
 
         <plugins>
             <!-- Compile and package the source code into a JAR -->
