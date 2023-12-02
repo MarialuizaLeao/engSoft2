@@ -120,4 +120,14 @@ public class Voter {
         election.computeVote(candidate, this);
       }
   }
+
+  public String getElectoralCard() {
+    return this.electoralCard;
+  }
+  public String getName() {
+    return this.name;
+  }
+  public String getState() {
+    return this.state;
+  }
 }
