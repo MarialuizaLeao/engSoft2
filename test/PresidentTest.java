@@ -1,4 +1,4 @@
-package main.test;
+package test;
 
 import main.*;
 import org.junit.*;
