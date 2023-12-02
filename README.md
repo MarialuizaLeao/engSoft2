@@ -9,6 +9,8 @@ A principal função do sistema é gerenciar uma eleição, onde é possível ca
 O sistema utiliza um broker para gerenciar as urnas de diferentes estados e direcionar o voto para a urna correta. Ademais, é utilizado um serverProxy para criar uma interface entre o cliente e o servidor, que é responsável por gerenciar os funcionários e eleitores. Por fim, é utilizado um server para gerenciar a eleição e os candidatos.
 O sistema foi impletado em Java.
 
+Testando
+
 ## Comandos make
 
 - `make` ou `make full`: Buildar + Executar
