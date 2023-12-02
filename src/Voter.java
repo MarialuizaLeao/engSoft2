@@ -57,7 +57,7 @@ public class Voter {
     }
   }
 
-  protected Voter(String electoralCard, String name, String state) {
+  public Voter(String electoralCard, String name, String state) {
     this.electoralCard = electoralCard;
     this.name = name;
     this.state = state;
