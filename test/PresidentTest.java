@@ -10,11 +10,7 @@ public class PresidentTest {
     String party = "PV";
     int number = 12;
 
-    President pres = new President.Builder()
-        .name(name)
-        .party(party)
-        .number(number)
-        .build();
+    President pres = new President(nome, party, number);
 
     assertTrue("O nome do candidato nao esta como definido pelo builder.", pres.getName().equals(name));
     assertTrue("O partido do candidato nao esta como definido pelo builder.", pres.getParty().equals(party));
