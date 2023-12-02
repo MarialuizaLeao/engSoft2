@@ -1,11 +1,9 @@
-package test;
+package unitTest;
 
 import main.Voter;
 import main.Urna;
 import main.Warning;
 import main.Election;
-
-import java.beans.Transient;
 
 import org.junit.*;
 

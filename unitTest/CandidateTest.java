@@ -1,4 +1,4 @@
-package test;
+package unitTest;
 
 import main.Candidate;
 import org.junit.*;

@@ -4,10 +4,10 @@
     "description": "Trabalho pratico 2 de Engenharia de Software 2",
     "main": "index.js",
     "directories": {
-        "test": "src/tests/java"
+        "test": "test/"
     },
     "scripts": {
-        "test": "mocha src/tests/java/*.test.js"
+        "test": "mocha tests/java/*.test.js"
     },
     "author": "Maria Luiza Leão e Luisa Toledo",
     "license": "ISC",

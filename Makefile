@@ -11,5 +11,6 @@ run:
 clean:
 	rm src/main/java/*.class
 
-test:
-	mvn test
+unit_test:
+	mvn unitTest
+
