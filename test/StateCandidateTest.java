@@ -3,7 +3,7 @@ package test;
 import main.StateCandidate;
 import org.junit.*;
 
-public class StateCandidate {
+public class StateCandidateTest{
 
     private StateCandidate stateCandidate;
 
