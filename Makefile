@@ -3,10 +3,13 @@ full:
 	make run
 
 build: 
-	cd "$(shell pwd)/src/main/java"  && javac Main.java
+	mvn clean package
 
 run: 
-	cd "$(shell pwd)/src/main/java" && java Main
+	java -jar ./Target/Urna.jar
 
 clean:
 	rm src/main/java/*.class
+
+test:
+	mvn test

@@ -1,7 +1,7 @@
-import static org.junit.Assert.*;
-import org.junit.Test;
+package main.test;
 
-import main.java.President;
+import main.President;
+import org.junit.*;
 
 public class PresidentTest {
   @Test

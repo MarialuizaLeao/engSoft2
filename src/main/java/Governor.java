@@ -1,3 +1,5 @@
+package main;
+
 import java.util.Set;
 
 public class Governor extends StateCandidate{
