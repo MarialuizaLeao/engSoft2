@@ -469,8 +469,7 @@ public class Urna implements loadUsers {
   @Override
   public void loadVoters() {
     try {
-      File myObj = new File("voterLoad.txt");
-      Scanner myReader = new Scanner(myObj);
+      Scanner myReader = new Scanner(VoterLoad.load);
       while (myReader.hasNextLine()) {
         String data = myReader.nextLine();
         var voterData = data.split(",");
