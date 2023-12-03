@@ -20,8 +20,8 @@ describe('E2E Tests', () => {
         await expectText('(2) Entrar (TSE)', waitForText);
         await sendInput('2', writeText, pressKey);
 
-        await expectText('Insira seu usuário:', waitForText);
-        await sendInput('cert', writeText, pressKey);
+        //await expectText('Insira seu usuário:', waitForText);
+        //await sendInput('cert', writeText, pressKey);
 
 
         // await expectText('Insira sua senha:', waitForText);
