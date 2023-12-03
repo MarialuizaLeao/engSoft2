@@ -2,6 +2,9 @@ package main;
 
 import java.util.HashMap;
 import java.util.Scanner;
+
+import main.Candidate;
+
 import java.util.Map;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -81,8 +84,10 @@ public class Urna implements loadUsers {
   private static boolean votePresident(Voter voter) {
     print("(ext) Desistir");
     print("Digite o número do candidato escolhido por você para presidente:");
+    Candidate c = eleicao.getPresidentByNumber(123);
+    print(c.getName());
     String vote = readString();
-    
+
     if (vote.equals("ext"))
       throw new StopTrap("Saindo da votação");
     // Branco
