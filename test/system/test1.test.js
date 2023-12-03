@@ -16,7 +16,7 @@ describe('E2E Tests', () => {
         const {spawn, cleanup} = await prepareEnvironment();
         const {waitForText, writeText, pressKey, wait, getExitCode} = await spawn('java', '-jar ./target/Main.jar');
 
-        await expectText('Escolha uma opção:', waitForText);
+        await expectText('(2) Entrar (TSE)', waitForText);
         await sendInput('2', writeText, pressKey);
 
         await expectText('Insira seu usuário:', waitForText);
