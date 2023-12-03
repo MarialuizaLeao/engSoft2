@@ -44,6 +44,9 @@ describe('E2E Tests', () => {
         await expectText('Insira seu título de eleitor:', waitForText);
         await sendInput('123456789012', writeText, pressKey);
 
+        await expectText('Insira sua cidade:', waitForText);
+        await sendInput('bh', writeText, pressKey);
+
         await expectText('(1) Sim', waitForText);
         await sendInput('1', writeText, pressKey);
 
