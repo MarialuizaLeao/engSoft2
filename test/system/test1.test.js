@@ -140,9 +140,9 @@ describe('E2E Tests', () => {
         await expectText('(0) Fechar aplicação', waitForText);
         await sendInput('0', writeText, pressKey);
 
-        //await wait(100);
-        //const exitCode = await getExitCode();
-        //await cleanup();
+        await wait(100);
+        const exitCode = await getExitCode();
+        await cleanup();
 
         expect(exitCode).to.equal(0);
         lastExpected = '';
