@@ -12,7 +12,7 @@ describe('E2E Tests', () => {
     }
   });
 
-    it('should be able to change their vote when the election is opened and display results at the end', async () => {
+    it('should be able to vote when the election is opened and display results at the end', async () => {
         const {spawn, cleanup} = await prepareEnvironment();
         const {waitForText, getStdout, writeText, pressKey, wait, getExitCode} = await spawn('java', '-jar ./target/Main.jar');
 
@@ -48,12 +48,6 @@ describe('E2E Tests', () => {
 
         await expectText('Digite o número do candidato escolhido por você para presidente:', waitForText);
         await sendInput('123', writeText, pressKey);
-
-        await expectText('(2) Mudar voto', waitForText);
-        await sendInput('2', writeText, pressKey);
-
-        await expectText('Digite o número do candidato escolhido por você para presidente:', waitForText);
-        await sendInput('124', writeText, pressKey);
 
         await expectText('(1) Confirmar', waitForText);
         await sendInput('1', writeText, pressKey);
@@ -112,6 +106,77 @@ describe('E2E Tests', () => {
         await expectText('(1) Confirmar', waitForText);
         await sendInput('1', writeText, pressKey);
 
+        await expectText('(1) Entrar (Eleitor)', waitForText);
+        await sendInput('1', writeText, pressKey);
+
+        await expectText('Insira seu título de eleitor:', waitForText);
+        await sendInput('268888719264', writeText, pressKey);
+
+        await expectText('Insira sua cidade:', waitForText);
+        await sendInput('bh', writeText, pressKey);
+
+        await expectText('(1) Sim', waitForText);
+        await sendInput('1', writeText, pressKey);
+
+        await expectText('Digite o número do candidato escolhido por você para presidente:', waitForText);
+        await sendInput('123', writeText, pressKey);
+
+        await expectText('(1) Confirmar', waitForText);
+        await sendInput('1', writeText, pressKey);
+
+        await expectText(
+            'Digite o número do 1º candidato escolhido por você para deputado federal:',
+            waitForText
+        );
+        await sendInput('12345', writeText, pressKey);
+
+        await expectText('(1) Confirmar', waitForText);
+        await sendInput('1', writeText, pressKey);
+
+        await expectText(
+            'Digite o número do 2º candidato escolhido por você para deputado federal:',
+            waitForText
+        );
+        await sendInput('54321', writeText, pressKey);
+
+        await expectText('(1) Confirmar', waitForText);
+        await sendInput('1', writeText, pressKey);
+
+        await expectText(
+            'Digite o número do candidato escolhido por você para governador:',
+            waitForText
+        );
+        await sendInput('123456', writeText, pressKey);
+
+        await expectText('(1) Confirmar', waitForText);
+        await sendInput('1', writeText, pressKey);
+        
+        await expectText(
+            'Digite o número do candidato escolhido por você para prefeito:',
+            waitForText
+        );
+        await sendInput('123354456', writeText, pressKey);
+
+        await expectText('(1) Confirmar', waitForText);
+        await sendInput('1', writeText, pressKey);
+
+        await expectText(
+            'Digite o número do 1º candidato escolhido por você para senador:',
+            waitForText
+        );
+        await sendInput('7654321', writeText, pressKey);
+
+        await expectText('(1) Confirmar', waitForText);
+        await sendInput('1', writeText, pressKey);
+
+        await expectText(
+            'Digite o número do 2º candidato escolhido por você para senador:',
+            waitForText
+        );
+        await sendInput('0', writeText, pressKey);
+
+        await expectText('(1) Confirmar', waitForText);
+        await sendInput('1', writeText, pressKey);
         
         await expectText('(2) Entrar (TSE)', waitForText);
         await sendInput('2', writeText, pressKey);
