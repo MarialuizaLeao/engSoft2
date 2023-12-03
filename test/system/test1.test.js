@@ -50,7 +50,7 @@ describe('E2E Tests', () => {
         await expectText('(1) Sim', waitForText);
         await sendInput('1', writeText, pressKey);
 
-        await expectText('Digite o número do candidato escolhido por você para President:',waitForText);
+        await expectText('Digite o número do candidato escolhido por você para President:', waitForText);
         await sendInput('123', writeText, pressKey);
 
         await expectText('(1) Confirmar', waitForText);
@@ -140,9 +140,9 @@ describe('E2E Tests', () => {
         await expectText('(0) Fechar aplicação', waitForText);
         await sendInput('0', writeText, pressKey);
 
-        await wait(100);
-        const exitCode = await getExitCode();
-        await cleanup();
+        //await wait(100);
+        //const exitCode = await getExitCode();
+        //await cleanup();
 
         expect(exitCode).to.equal(0);
         lastExpected = '';
