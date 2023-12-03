@@ -46,9 +46,7 @@ jobs:
         node-version: 16.x
         cache: 'npm'
     - name: Install system test dependencies
-      run:
-        npm install 
-        npm ci
+      run: npm ci
     - name: Build application
       run: mvn package
     - name: Run system tests
