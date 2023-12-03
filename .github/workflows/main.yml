@@ -30,7 +30,10 @@ jobs:
     - name: Run unit tests
       run: mvn test
   system-tests:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
     needs: unit-tests
     steps:
     - uses: actions/checkout@v3

@@ -14,7 +14,7 @@ describe('E2E Tests', () => {
 
     it('should be able to vote when the election is opened and display results at the end', async () => {
         const {spawn, cleanup} = await prepareEnvironment();
-        const {waitForText, writeText, pressKey, wait, getExitCode} = await spawn('java', ['-jar target/Main.jar']);
+        const {waitForText, writeText, pressKey, wait, getExitCode} = await spawn('java', ['-jar ./target/Main.jar']);
 
         await expectText('(2) Entrar (TSE)', waitForText);
         await sendInput('2', writeText, pressKey);
