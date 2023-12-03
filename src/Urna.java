@@ -81,9 +81,8 @@ public class Urna implements loadUsers {
   private static boolean votePresident(Voter voter) {
     print("(ext) Desistir");
     print("Digite o número do candidato escolhido por você para presidente:");
-    President candidate = eleicao.getPresidentByNumber('123');
-    print(candidate.getName());
     String vote = readString();
+    
     if (vote.equals("ext"))
       throw new StopTrap("Saindo da votação");
     // Branco

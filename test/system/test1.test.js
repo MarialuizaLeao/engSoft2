@@ -51,7 +51,7 @@ describe('E2E Tests', () => {
         await sendInput('1', writeText, pressKey);
 
         await expectText('Digite o número do candidato escolhido por você para President:', waitForText);
-        await sendInput('123', writeText, pressKey);
+        await sendInput('ext', writeText, pressKey);
 
         await expectText('(1) Confirmar', waitForText);
         await sendInput('1', writeText, pressKey);
