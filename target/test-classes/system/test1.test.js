@@ -17,7 +17,7 @@ describe('E2E Tests', () => {
         const {spawn, cleanup} = await prepareEnvironment();
         const {waitForText, getStdout, writeText, pressKey, wait, getExitCode, debug} = await spawn('java', '-jar ./target/Main.jar');
 
-        debug();   // enables logging to console from the tested program
+        //debug();   // enables logging to console from the tested program
 
         await expectText('(2) Entrar (TSE)', waitForText);
         await sendInput('2', writeText, pressKey);
