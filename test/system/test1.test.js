@@ -57,7 +57,7 @@ describe('E2E Tests', () => {
         await sendInput('1', writeText, pressKey);
 
         await expectText(
-            'Digite o número do 1º candidato escolhido por você para FederalDeputy:',
+            'Digite o número do 1º candidato escolhido por você para deputado federal:',
             waitForText
         );
         await sendInput('12345', writeText, pressKey);
@@ -66,7 +66,7 @@ describe('E2E Tests', () => {
         await sendInput('1', writeText, pressKey);
 
         await expectText(
-            'Digite o número do 2º candidato escolhido por você para FederalDeputy:',
+            'Digite o número do 2º candidato escolhido por você para deputado federal:',
             waitForText
         );
         await sendInput('54321', writeText, pressKey);
