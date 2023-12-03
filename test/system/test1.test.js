@@ -29,8 +29,8 @@ describe('E2E Tests', () => {
         await expectText('Insira sua senha:', waitForText);
         await sendInput('54321', writeText, pressKey);
 
-        await expectText('(1) Iniciar sessão', waitForText);
-        await sendInput('1', writeText, pressKey);
+        await expectText('(3) Iniciar sessão', waitForText);
+        await sendInput('3', writeText, pressKey);
 
         await expectText('Insira a senha da urna', waitForText);
         await sendInput('password', writeText, pressKey);
