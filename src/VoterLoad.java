@@ -1,6 +1,6 @@
 package main;
 
-public class VoterLoad {
+public class voterLoad {
   public static String load = """
       123456789012,Engenharia de Software II Tester,MG
       268888719264,Madeline Deckow,MG

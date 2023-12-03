@@ -469,7 +469,7 @@ public class Urna implements loadUsers {
   @Override
   public void loadVoters() {
     try {
-      Scanner myReader = new Scanner(VoterLoad.load);
+      Scanner myReader = new Scanner(voterLoad.load);
       while (myReader.hasNextLine()) {
         String data = myReader.nextLine();
         var voterData = data.split(",");

@@ -1,9 +1,6 @@
 package test;
 
 import main.Voter;
-import main.Urna;
-import main.Warning;
-import main.Election;
 
 import org.junit.*;
 
