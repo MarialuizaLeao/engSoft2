@@ -72,9 +72,6 @@ describe('E2E Tests', () => {
         await expectText('(0) Sair', waitForText);
         await sendInput('0', writeText, pressKey);
 
-        await expectText('(0) Sair', waitForText);
-        await sendInput('0', writeText, pressKey);
-
         await expectText('(0) Fechar aplicação', waitForText);
         await sendInput('0', writeText, pressKey);
 
