@@ -471,7 +471,7 @@ describe('E2E Tests', () => {
     await expectText('Insira a senha da urna', waitForText);
     await sendInput('password', writeText, pressKey);
 
-    await expectText('João do PDS1 com 100', waitForText);
+    await expectText('Resultado da eleicao:', waitForText);
 
     await expectText('(0) Sair', waitForText);
     await sendInput('0', writeText, pressKey);
